@@ -91,3 +91,17 @@ PDFのタイトルは「Physical AI 応用1 最終課題」、Authorはchocopan�
 
 `tools/render_report.py` の実行、`pdfinfo`、`pdftotext -layout`、`pdftoppm` による
 再生成・metadata・指定項目・全3頁の目視確認を行い、別担当も表幅と内容を照合した。
+
+## ロボット図版・パッケージ構成の確認
+
+第2章へユーザー提供のAI Worker外観参考とGazebo SG2の図を追加し、MarkdownとPDFの
+双方に同じ画像・キャプションを収録した。画像は縦横比を維持して横並びに配置し、
+`pdfimages -list REPORT.pdf` で600×589および3191×1850の2画像の埋込みを確認した。
+再生成したPDF全3頁を目視し、第6章の細い観点列と表の同頁配置も再確認した。
+
+専用コンテナで `ros2 pkg prefix ffw_bringup`、`ros2 pkg prefix ffw_moveit_config`、
+`ros2 pkg prefix rmw_zenoh_cpp` を実行し、各prefixの `share/<package>/package.xml` の
+存在を確認した。前2者は `/root/ros2_ws/install/` 配下、RMWは `/opt/ros/jazzy` 配下にある。
+`tools/container.sh exec python3 -c` で同梱の `Mission` と `train` のimportも成功した。
+独自部分はPythonスクリプトとして直接実行するため、このrepoに独自のpackage.xmlは不要。
+理由と実行境界はREADMEの実行環境にも記載した。

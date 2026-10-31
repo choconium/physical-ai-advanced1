@@ -18,3 +18,9 @@ the property of their respective rights holders. This repository's Apache-2.0
 license applies to its original contributions and does not relicense third-party
 models, images, fonts or dependencies. No ROBOTIS source tree or binary image is
 vendored here. This is an independent course project, without an endorsement claim.
+
+The report illustrations `media/fig1-aiworker_front2.png` (AI Worker appearance)
+and `media/fig2-ffw_sg2_gazebo.png` (SG2 in Gazebo) were supplied by the user.
+They illustrate robot geometry and are separate from the recorded wipe experiment.
+Third-party appearance images and the ROBOTIS visual assets retain their original
+rights; this repository does not relicense them as original project artwork.

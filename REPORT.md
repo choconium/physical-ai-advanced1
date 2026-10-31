@@ -20,6 +20,11 @@ GitHub repo：https://github.com/choconium/physical-ai-advanced1
 
 公式AIWorker 2.3.1、SG2、ROS 2 Jazzy、Gazebo Harmonic、MoveItを使う。MoveItの起動はmodel:=sg2を明示する。既定bg2のままSG2を計画する設定にはしない。groupはarm_r、EEはend_effector_r_link、controllerはarm_r_controllerのFollowJointTrajectory。
 
+図1にAI Workerの外観参考、図2にGazebo上のSG2モデルを示す。双腕・頭部・胴体の形状と、SG2の移動台座の構成を確認できる。図はロボット形状の説明用で、ホワイトボード消去の実演結果は第3章の実測と第7章の動画で示す。
+
+![図1：ROBOTIS AI Workerの外観参考（提供画像、白背景版）。双腕・頭部・胴体の形状。](media/fig1-aiworker_front2.png)
+![図2：Gazebo上のSG2モデル（提供画像）。腕と移動台座を含む全体形状。](media/fig2-ffw_sg2_gazebo.png)
+
 ホワイトボードは36×30cm、文字は約20×10cmのAIを27個の黒いセルで表した。板の衝突形状はGazeboとMoveItの両方へ登録し、消し具の取付collisionもMoveItへ登録する。Gazebo上の青い工具は実測TFに追従するvisual proxyであり、力学的に把持・変形する工具ではない。
 
 AIはQ-learningによる固定3帯の順序選択で、同梱の学習器（src/gazebo_aiworker_patrol）を利用する。現在帯・訪問済み集合を状態にし、seed=20261030、4000 episodeで簡略グラフを学習する。文字画像やdirty maskは方策の入力にしていない。ログのdirty_cellsは残存数の記録であり、画像認識や消し残しに応じた適応的再消去を実装したとは主張しない。

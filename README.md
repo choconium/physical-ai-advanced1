@@ -36,6 +36,12 @@ Linux/WSL2のDocker Engineで実行します。公式ROBOTIS imageはamd64、ROS
 
 このリポジトリ単独で実行でき、別リポジトリや実機ネットワークへの接続は不要です。専用コンテナ・ROS domain64を使い、host network、実機デバイス、公開ポートは使いません。GUIはコンテナ内の仮想画面へ描画し、録画をファイルに保存します。
 
+### package.xmlがない理由
+
+このリポジトリの独自部分は `tools/` のPythonスクリプトと、`PYTHONPATH=/project/src` から読み込む学習器です。独自のROSパッケージとしてビルドしないため、ここに `package.xml` や `colcon build` は必要ありません。`ros2 launch` / `ros2 run` で使う `ffw_bringup`、`ffw_moveit_config`、`rmw_zenoh_cpp` は公式Dockerイメージ内に、各 `package.xml` を含めて導入済みです。`tools/ros_env.sh` がそのROS環境を読み込みます。ホストへROSを直接導入して使う構成は、今回の再現手順には含めません。
+
+### 起動手順
+
 ```bash
 git clone https://github.com/choconium/physical-ai-advanced1.git
 cd physical-ai-advanced1
