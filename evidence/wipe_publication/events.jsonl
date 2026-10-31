@@ -1,0 +1,27 @@
+{"event": "tf_rejected", "wall_monotonic_s": 2250.946898515, "elapsed_wall_s": 0.0013656440000886505, "count": 1, "reason": "Could not find a connection between 'base_link' and 'end_effector_r_link' because they are not part of the same tree.Tf has two or more unconnected trees."}
+{"event": "model_definition", "wall_monotonic_s": 2250.994241627, "elapsed_wall_s": 0.048708801999964635, "surrogate": "geometric ink cells, not contact force or real pigment", "board": {"surface_x": 0.52, "center_y": -0.28, "center_z": 1.05, "width_y": 0.36, "height_z": 0.3, "thickness_x": 0.02, "ink_x": 0.518}, "ee_to_contact_local": [0, 0, -0.08], "nominal_standoff_m": 0.005}
+{"event": "policy_decision", "wall_monotonic_s": 2250.99465426, "elapsed_wall_s": 0.04912138899999263, "state": [0, 0], "action": 1, "band_z": 1.0875, "dirty_cells": 27}
+{"event": "approach_executed", "wall_monotonic_s": 2254.903078, "elapsed_wall_s": 3.9575454129999343, "points": 36}
+{"event": "cartesian_planned", "wall_monotonic_s": 2254.906015862, "elapsed_wall_s": 3.96048299999984, "segment": 0, "fraction": 1.0, "points": 3}
+{"event": "cartesian_planned", "wall_monotonic_s": 2255.986121969, "elapsed_wall_s": 5.040589087999706, "segment": 1, "fraction": 1.0, "points": 13}
+{"event": "cartesian_planned", "wall_monotonic_s": 2258.022501105, "elapsed_wall_s": 7.07696826099982, "segment": 2, "fraction": 1.0, "points": 23}
+{"event": "cartesian_planned", "wall_monotonic_s": 2271.109682395, "elapsed_wall_s": 20.16414955099981, "segment": 3, "fraction": 1.0, "points": 23}
+{"event": "cartesian_planned", "wall_monotonic_s": 2284.14559056, "elapsed_wall_s": 33.200057660999846, "segment": 4, "fraction": 1.0, "points": 13}
+{"event": "band_executed", "wall_monotonic_s": 2286.172953607, "elapsed_wall_s": 35.22742079, "band": 1, "total_pixels": 27, "erased_pixels": 11, "residual_pixels": 16, "erasure_ratio": 0.4074074074074074}
+{"event": "policy_decision", "wall_monotonic_s": 2286.173458811, "elapsed_wall_s": 35.22792594900011, "state": [1, 1], "action": 2, "band_z": 1.05, "dirty_cells": 16}
+{"event": "approach_executed", "wall_monotonic_s": 2287.163659558, "elapsed_wall_s": 36.21812667699987, "points": 11}
+{"event": "cartesian_planned", "wall_monotonic_s": 2287.165658164, "elapsed_wall_s": 36.22012531099972, "segment": 0, "fraction": 1.0, "points": 4}
+{"event": "cartesian_planned", "wall_monotonic_s": 2288.204114946, "elapsed_wall_s": 37.258582037999986, "segment": 1, "fraction": 1.0, "points": 12}
+{"event": "cartesian_planned", "wall_monotonic_s": 2290.241398273, "elapsed_wall_s": 39.29586538300009, "segment": 2, "fraction": 1.0, "points": 22}
+{"event": "cartesian_planned", "wall_monotonic_s": 2303.283107065, "elapsed_wall_s": 52.33757429499974, "segment": 3, "fraction": 1.0, "points": 22}
+{"event": "cartesian_planned", "wall_monotonic_s": 2316.380517094, "elapsed_wall_s": 65.43498435099991, "segment": 4, "fraction": 1.0, "points": 12}
+{"event": "band_executed", "wall_monotonic_s": 2318.412947748, "elapsed_wall_s": 67.46741498699976, "band": 2, "total_pixels": 27, "erased_pixels": 17, "residual_pixels": 10, "erasure_ratio": 0.6296296296296297}
+{"event": "policy_decision", "wall_monotonic_s": 2318.41388034, "elapsed_wall_s": 67.46834748699985, "state": [2, 3], "action": 3, "band_z": 1.0125, "dirty_cells": 10}
+{"event": "approach_executed", "wall_monotonic_s": 2319.513698162, "elapsed_wall_s": 68.56816538199973, "points": 12}
+{"event": "cartesian_planned", "wall_monotonic_s": 2319.515610851, "elapsed_wall_s": 68.57007799799976, "segment": 0, "fraction": 1.0, "points": 3}
+{"event": "cartesian_planned", "wall_monotonic_s": 2320.538880258, "elapsed_wall_s": 69.59334736799974, "segment": 1, "fraction": 1.0, "points": 12}
+{"event": "cartesian_planned", "wall_monotonic_s": 2322.576010573, "elapsed_wall_s": 71.63047772899972, "segment": 2, "fraction": 1.0, "points": 23}
+{"event": "cartesian_planned", "wall_monotonic_s": 2335.612371276, "elapsed_wall_s": 84.66683837699975, "segment": 3, "fraction": 1.0, "points": 23}
+{"event": "cartesian_planned", "wall_monotonic_s": 2348.635762965, "elapsed_wall_s": 97.69023008499971, "segment": 4, "fraction": 1.0, "points": 12}
+{"event": "band_executed", "wall_monotonic_s": 2350.712816259, "elapsed_wall_s": 99.76728346999971, "band": 3, "total_pixels": 27, "erased_pixels": 27, "residual_pixels": 0, "erasure_ratio": 1.0}
+{"event": "finished", "wall_monotonic_s": 2350.713207744, "elapsed_wall_s": 99.76767489999975, "success": true, "total_pixels": 27, "erased_pixels": 27, "residual_pixels": 0, "erasure_ratio": 1.0}

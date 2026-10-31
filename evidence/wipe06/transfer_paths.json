@@ -1,0 +1,480 @@
+{
+  "schema": "aiworker-whiteboard-transfer/v1",
+  "contract": {
+    "adapter": "fixed hypothetical end adapter; physical TCP not yet verified",
+    "contact": "geometric standoff path only; no force, impedance, friction, or pigment model",
+    "collision_basis": "the identity/+x side-adapter hypothesis was rejected by collision-aware state validity; this end-mounted geometry only avoids that fixed-model collision",
+    "execution": "export only; no ROS publishers, actions, or hardware commands"
+  },
+  "config": {
+    "robot": {
+      "planning_group": "arm_r",
+      "ee_frame": "end_effector_r_link"
+    },
+    "board": {
+      "origin": [
+        0.52,
+        -0.28,
+        1.05
+      ],
+      "normal": [
+        -1.0,
+        0.0,
+        0.0
+      ],
+      "u": [
+        0.0,
+        -1.0,
+        0.0
+      ],
+      "v": [
+        0.0,
+        0.0,
+        1.0
+      ]
+    },
+    "tool": {
+      "ee_to_contact_local": [
+        0.0,
+        0.0,
+        -0.08
+      ],
+      "ee_to_contact_rotation_xyzw": [
+        0.0,
+        0.7071067811865476,
+        0.0,
+        0.7071067811865476
+      ],
+      "pad_width": 0.07,
+      "pad_height": 0.045
+    },
+    "wipe": {
+      "nominal_standoff": 0.005,
+      "approach_standoff": 0.045,
+      "speed": 0.02,
+      "bands_v": [
+        0.0375,
+        0.0,
+        -0.0375
+      ],
+      "u_start": 0.13,
+      "u_end": -0.13
+    }
+  },
+  "bands": [
+    {
+      "band_index": 0,
+      "v_offset_m": 0.0375,
+      "planning_group": "arm_r",
+      "ee_frame": "end_effector_r_link",
+      "target_poses": [
+        {
+          "phase": "approach_start",
+          "standoff_m": 0.045,
+          "contact_xyz": [
+            0.47500000000000003,
+            -0.41000000000000003,
+            1.0875000000000001
+          ],
+          "ee_xyz": [
+            0.395,
+            -0.41000000000000003,
+            1.0875000000000001
+          ],
+          "quaternion_xyzw": [
+            0.0,
+            -0.7071067811865476,
+            0.0,
+            0.7071067811865476
+          ],
+          "contact_quaternion_xyzw": [
+            -0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        {
+          "phase": "near_start",
+          "standoff_m": 0.005,
+          "contact_xyz": [
+            0.515,
+            -0.41000000000000003,
+            1.0875000000000001
+          ],
+          "ee_xyz": [
+            0.435,
+            -0.41000000000000003,
+            1.0875000000000001
+          ],
+          "quaternion_xyzw": [
+            0.0,
+            -0.7071067811865476,
+            0.0,
+            0.7071067811865476
+          ],
+          "contact_quaternion_xyzw": [
+            -0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        {
+          "phase": "near_end",
+          "standoff_m": 0.005,
+          "contact_xyz": [
+            0.515,
+            -0.15000000000000002,
+            1.0875000000000001
+          ],
+          "ee_xyz": [
+            0.435,
+            -0.15000000000000002,
+            1.0875000000000001
+          ],
+          "quaternion_xyzw": [
+            0.0,
+            -0.7071067811865476,
+            0.0,
+            0.7071067811865476
+          ],
+          "contact_quaternion_xyzw": [
+            -0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        {
+          "phase": "return_start",
+          "standoff_m": 0.005,
+          "contact_xyz": [
+            0.515,
+            -0.41000000000000003,
+            1.0875000000000001
+          ],
+          "ee_xyz": [
+            0.435,
+            -0.41000000000000003,
+            1.0875000000000001
+          ],
+          "quaternion_xyzw": [
+            0.0,
+            -0.7071067811865476,
+            0.0,
+            0.7071067811865476
+          ],
+          "contact_quaternion_xyzw": [
+            -0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        {
+          "phase": "retreat",
+          "standoff_m": 0.045,
+          "contact_xyz": [
+            0.47500000000000003,
+            -0.41000000000000003,
+            1.0875000000000001
+          ],
+          "ee_xyz": [
+            0.395,
+            -0.41000000000000003,
+            1.0875000000000001
+          ],
+          "quaternion_xyzw": [
+            0.0,
+            -0.7071067811865476,
+            0.0,
+            0.7071067811865476
+          ],
+          "contact_quaternion_xyzw": [
+            -0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "band_index": 1,
+      "v_offset_m": 0.0,
+      "planning_group": "arm_r",
+      "ee_frame": "end_effector_r_link",
+      "target_poses": [
+        {
+          "phase": "approach_start",
+          "standoff_m": 0.045,
+          "contact_xyz": [
+            0.47500000000000003,
+            -0.41000000000000003,
+            1.05
+          ],
+          "ee_xyz": [
+            0.395,
+            -0.41000000000000003,
+            1.05
+          ],
+          "quaternion_xyzw": [
+            0.0,
+            -0.7071067811865476,
+            0.0,
+            0.7071067811865476
+          ],
+          "contact_quaternion_xyzw": [
+            -0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        {
+          "phase": "near_start",
+          "standoff_m": 0.005,
+          "contact_xyz": [
+            0.515,
+            -0.41000000000000003,
+            1.05
+          ],
+          "ee_xyz": [
+            0.435,
+            -0.41000000000000003,
+            1.05
+          ],
+          "quaternion_xyzw": [
+            0.0,
+            -0.7071067811865476,
+            0.0,
+            0.7071067811865476
+          ],
+          "contact_quaternion_xyzw": [
+            -0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        {
+          "phase": "near_end",
+          "standoff_m": 0.005,
+          "contact_xyz": [
+            0.515,
+            -0.15000000000000002,
+            1.05
+          ],
+          "ee_xyz": [
+            0.435,
+            -0.15000000000000002,
+            1.05
+          ],
+          "quaternion_xyzw": [
+            0.0,
+            -0.7071067811865476,
+            0.0,
+            0.7071067811865476
+          ],
+          "contact_quaternion_xyzw": [
+            -0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        {
+          "phase": "return_start",
+          "standoff_m": 0.005,
+          "contact_xyz": [
+            0.515,
+            -0.41000000000000003,
+            1.05
+          ],
+          "ee_xyz": [
+            0.435,
+            -0.41000000000000003,
+            1.05
+          ],
+          "quaternion_xyzw": [
+            0.0,
+            -0.7071067811865476,
+            0.0,
+            0.7071067811865476
+          ],
+          "contact_quaternion_xyzw": [
+            -0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        {
+          "phase": "retreat",
+          "standoff_m": 0.045,
+          "contact_xyz": [
+            0.47500000000000003,
+            -0.41000000000000003,
+            1.05
+          ],
+          "ee_xyz": [
+            0.395,
+            -0.41000000000000003,
+            1.05
+          ],
+          "quaternion_xyzw": [
+            0.0,
+            -0.7071067811865476,
+            0.0,
+            0.7071067811865476
+          ],
+          "contact_quaternion_xyzw": [
+            -0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        }
+      ]
+    },
+    {
+      "band_index": 2,
+      "v_offset_m": -0.0375,
+      "planning_group": "arm_r",
+      "ee_frame": "end_effector_r_link",
+      "target_poses": [
+        {
+          "phase": "approach_start",
+          "standoff_m": 0.045,
+          "contact_xyz": [
+            0.47500000000000003,
+            -0.41000000000000003,
+            1.0125
+          ],
+          "ee_xyz": [
+            0.395,
+            -0.41000000000000003,
+            1.0125
+          ],
+          "quaternion_xyzw": [
+            0.0,
+            -0.7071067811865476,
+            0.0,
+            0.7071067811865476
+          ],
+          "contact_quaternion_xyzw": [
+            -0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        {
+          "phase": "near_start",
+          "standoff_m": 0.005,
+          "contact_xyz": [
+            0.515,
+            -0.41000000000000003,
+            1.0125
+          ],
+          "ee_xyz": [
+            0.435,
+            -0.41000000000000003,
+            1.0125
+          ],
+          "quaternion_xyzw": [
+            0.0,
+            -0.7071067811865476,
+            0.0,
+            0.7071067811865476
+          ],
+          "contact_quaternion_xyzw": [
+            -0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        {
+          "phase": "near_end",
+          "standoff_m": 0.005,
+          "contact_xyz": [
+            0.515,
+            -0.15000000000000002,
+            1.0125
+          ],
+          "ee_xyz": [
+            0.435,
+            -0.15000000000000002,
+            1.0125
+          ],
+          "quaternion_xyzw": [
+            0.0,
+            -0.7071067811865476,
+            0.0,
+            0.7071067811865476
+          ],
+          "contact_quaternion_xyzw": [
+            -0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        {
+          "phase": "return_start",
+          "standoff_m": 0.005,
+          "contact_xyz": [
+            0.515,
+            -0.41000000000000003,
+            1.0125
+          ],
+          "ee_xyz": [
+            0.435,
+            -0.41000000000000003,
+            1.0125
+          ],
+          "quaternion_xyzw": [
+            0.0,
+            -0.7071067811865476,
+            0.0,
+            0.7071067811865476
+          ],
+          "contact_quaternion_xyzw": [
+            -0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        },
+        {
+          "phase": "retreat",
+          "standoff_m": 0.045,
+          "contact_xyz": [
+            0.47500000000000003,
+            -0.41000000000000003,
+            1.0125
+          ],
+          "ee_xyz": [
+            0.395,
+            -0.41000000000000003,
+            1.0125
+          ],
+          "quaternion_xyzw": [
+            0.0,
+            -0.7071067811865476,
+            0.0,
+            0.7071067811865476
+          ],
+          "contact_quaternion_xyzw": [
+            -0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        }
+      ]
+    }
+  ]
+}

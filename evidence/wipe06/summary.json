@@ -1,0 +1,15 @@
+{
+  "run_id": "wipe06",
+  "success": true,
+  "completed_bands": 3,
+  "reason": "all planned bands executed and all surrogate ink removed",
+  "wall_duration_s": 101.90294899700166,
+  "measured_tool_samples": 2017,
+  "tf_rejected_samples": 4,
+  "last_tf_error": "TF stale or from another clock",
+  "model": "TF-driven geometric erasure surrogate; force and pigment physics not simulated",
+  "total_pixels": 27,
+  "erased_pixels": 27,
+  "residual_pixels": 0,
+  "erasure_ratio": 1.0
+}

@@ -1,0 +1,65 @@
+{
+  "selected_run": {
+    "run_id": "wipe_publication",
+    "success": true,
+    "completed_bands": 3,
+    "reason": "all planned bands executed and all surrogate ink removed",
+    "wall_duration_s": 99.76969505199986,
+    "measured_tool_samples": 1986,
+    "tf_rejected_samples": 2,
+    "last_tf_error": "Could not find a connection between 'base_link' and 'end_effector_r_link' because they are not part of the same tree.Tf has two or more unconnected trees.",
+    "model": "TF-driven geometric erasure surrogate; force and pigment physics not simulated",
+    "total_pixels": 27,
+    "erased_pixels": 27,
+    "residual_pixels": 0,
+    "erasure_ratio": 1.0
+  },
+  "cartesian_paths": 15,
+  "all_path_fractions": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+  ],
+  "before_mask_pixels": 5292,
+  "after_mask_pixels": 0,
+  "mask_erasure_ratio": 1.0,
+  "unique_tf_triggered_erasures": 27,
+  "limitations": "geometric surrogate only; no force/pigment physics or real robot execution",
+  "trials_during_development": [
+    {
+      "run_id": "wipe_publication",
+      "success": true,
+      "completed_bands": 3,
+      "reason": "all planned bands executed and all surrogate ink removed",
+      "wall_duration_s": 99.76969505199986,
+      "measured_tool_samples": 1986,
+      "tf_rejected_samples": 2,
+      "last_tf_error": "Could not find a connection between 'base_link' and 'end_effector_r_link' because they are not part of the same tree.Tf has two or more unconnected trees.",
+      "model": "TF-driven geometric erasure surrogate; force and pigment physics not simulated",
+      "total_pixels": 27,
+      "erased_pixels": 27,
+      "residual_pixels": 0,
+      "erasure_ratio": 1.0
+    }
+  ],
+  "sha256": {
+    "summary.json": "36d3ad85a670dc8ce94829a3cb65434a535bce9f93ae31af47ca77f93e2c1df2",
+    "events.jsonl": "579f94a337edaf7fe720f867da19b9f25a3a64a1ea33d55353ed2f26c097c714",
+    "tool_samples.jsonl": "1998587b16f9ff223bb6050e391afe6df321bf4f4473cb7db0c1e29731a43d9f",
+    "before_mask.png": "b5bc47c4b7f863eb087e0dc47758335cffbe50441bf9cc01754b264b2ff5a2c9",
+    "after_mask.png": "bcfb56e0b176bc6ba978d8e8c7288f9fa45ed8d72c995da250ae505aad1690ef",
+    "transfer_paths.json": "99e8cdaf84f1c414a22e83595874275f6043225556f6a53f1e5acef0ef06a2ed"
+  }
+}

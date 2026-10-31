@@ -1,0 +1,15 @@
+{
+  "run_id": "wipe_publication",
+  "success": true,
+  "completed_bands": 3,
+  "reason": "all planned bands executed and all surrogate ink removed",
+  "wall_duration_s": 99.76969505199986,
+  "measured_tool_samples": 1986,
+  "tf_rejected_samples": 2,
+  "last_tf_error": "Could not find a connection between 'base_link' and 'end_effector_r_link' because they are not part of the same tree.Tf has two or more unconnected trees.",
+  "model": "TF-driven geometric erasure surrogate; force and pigment physics not simulated",
+  "total_pixels": 27,
+  "erased_pixels": 27,
+  "residual_pixels": 0,
+  "erasure_ratio": 1.0
+}

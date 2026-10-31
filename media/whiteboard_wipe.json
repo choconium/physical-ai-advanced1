@@ -1,0 +1,43 @@
+{
+  "source": "actual Gazebo screen capture",
+  "duration_s": 95.75,
+  "raw_duration_s": 120.375,
+  "normalized_capture_duration_s": 106.95833333333333,
+  "captured_frames": 2567,
+  "capture_wall_duration_s": 107.19340532899878,
+  "timestamps_normalized_from_frame_index": true,
+  "retained_motion_s": 95.74481499299833,
+  "speed": 1.0,
+  "intervals_s": [
+    [
+      9.39623514199884,
+      45.81634068299972
+    ],
+    [
+      45.86623398299999,
+      58.379415380998395
+    ],
+    [
+      58.729606068999786,
+      75.4936003439987
+    ],
+    [
+      75.6422945919996,
+      90.79047463399984
+    ],
+    [
+      91.14047024199972,
+      103.591391277
+    ],
+    [
+      103.7426394139995,
+      106.19107211599912
+    ]
+  ],
+  "raw_sha256": "196ba236f33045aa274d4e831643f45b6008d69f5449e40e3aee5002abb4b250",
+  "motion_log_sha256": "149cdccc7903a94f0d442f95e99c43a3da6393d42d6829e9c6950a319639d210",
+  "video_sha256": "2aa22a97dddde88d24547536e1e1b1d6ef02170455bc8231a45aac0c657b11c1",
+  "slides": false,
+  "padded_frames": false,
+  "looped_frames": false
+}

@@ -1,0 +1,60 @@
+#!/usr/bin/env python3
+"""Render the local Markdown report to a Japanese PDF with embedded IPA font."""
+import argparse
+from html import escape
+from pathlib import Path
+import re
+from reportlab.lib import colors
+from reportlab.lib.pagesizes import A4
+from reportlab.lib.styles import ParagraphStyle
+from reportlab.pdfbase import pdfmetrics
+from reportlab.pdfbase.ttfonts import TTFont
+from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Table, TableStyle
+
+
+def clean(text):
+    return escape(re.sub(r'\[([^]]+)\]\(([^)]+)\)', r'\1 (\2)', text).replace('`', '').replace('**', ''))
+
+
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--input', type=Path, default=Path('REPORT.md'))
+    parser.add_argument('--output', type=Path, default=Path('REPORT.pdf'))
+    args = parser.parse_args()
+    pdfmetrics.registerFont(TTFont('IPA', '/usr/share/fonts/opentype/ipafont-gothic/ipag.ttf'))
+    body = ParagraphStyle('body', fontName='IPA', fontSize=9, leading=15, wordWrap='CJK', spaceAfter=7)
+    heading = ParagraphStyle('heading', parent=body, fontSize=13, leading=19, spaceBefore=13)
+    story, table = [], []
+
+    def flush():
+        if table:
+            width = A4[0] - 80
+            rows = [[Paragraph(clean(cell), body) for cell in row] for row in table]
+            block = Table(rows, colWidths=[width / len(table[0])] * len(table[0]), repeatRows=1)
+            block.setStyle(TableStyle([('GRID', (0, 0), (-1, -1), .3, colors.grey),
+                                       ('BACKGROUND', (0, 0), (-1, 0), colors.HexColor('#e6edf4')),
+                                       ('VALIGN', (0, 0), (-1, -1), 'TOP')]))
+            story.extend([block, Spacer(1, 10)])
+            table.clear()
+    for line in args.input.read_text().splitlines():
+        if line.startswith('|'):
+            cells = [cell.strip() for cell in line.strip('|').split('|')]
+            if not all(re.fullmatch(r'[:\-\s]+', cell) for cell in cells):
+                table.append(cells)
+            continue
+        flush()
+        if not line.strip():
+            continue
+        if line.startswith('#'):
+            story.append(Paragraph(clean(line.lstrip('# ')), heading))
+        else:
+            story.append(Paragraph(clean(line.lstrip('> ')), body))
+    flush()
+    document = SimpleDocTemplate(str(args.output), pagesize=A4, rightMargin=40, leftMargin=40,
+                                 topMargin=35, bottomMargin=35, title='AIWorker-SG2 白板消去テスト', author='Physical AI submission')
+    document.build(story)
+    print(args.output)
+
+
+if __name__ == '__main__':
+    main()

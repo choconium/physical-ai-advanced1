@@ -1,0 +1,26 @@
+{
+  "robot": {
+    "planning_group": "arm_r",
+    "ee_frame": "end_effector_r_link"
+  },
+  "board": {
+    "origin": [0.52, -0.28, 1.05],
+    "normal": [-1.0, 0.0, 0.0],
+    "u": [0.0, -1.0, 0.0],
+    "v": [0.0, 0.0, 1.0]
+  },
+  "tool": {
+    "ee_to_contact_local": [0.0, 0.0, -0.08],
+    "ee_to_contact_rotation_xyzw": [0.0, 0.7071067811865476, 0.0, 0.7071067811865476],
+    "pad_width": 0.07,
+    "pad_height": 0.045
+  },
+  "wipe": {
+    "nominal_standoff": 0.005,
+    "approach_standoff": 0.045,
+    "speed": 0.02,
+    "bands_v": [0.0375, 0.0, -0.0375],
+    "u_start": 0.13,
+    "u_end": -0.13
+  }
+}
