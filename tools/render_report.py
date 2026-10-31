@@ -23,14 +23,22 @@ def main():
     args = parser.parse_args()
     pdfmetrics.registerFont(TTFont('IPA', '/usr/share/fonts/opentype/ipafont-gothic/ipag.ttf'))
     body = ParagraphStyle('body', fontName='IPA', fontSize=9, leading=15, wordWrap='CJK', spaceAfter=7)
-    heading = ParagraphStyle('heading', parent=body, fontSize=13, leading=19, spaceBefore=13)
+    heading = ParagraphStyle('heading', parent=body, fontSize=13, leading=19, spaceBefore=13,
+                             keepWithNext=True)
     story, table = [], []
 
     def flush():
         if table:
             width = A4[0] - 80
             rows = [[Paragraph(clean(cell), body) for cell in row] for row in table]
-            block = Table(rows, colWidths=[width / len(table[0])] * len(table[0]), repeatRows=1)
+            col_widths = [width / len(table[0])] * len(table[0])
+            criteria_table = len(table[0]) == 2 and table[0][0] == '観点'
+            if criteria_table:
+                # Three Japanese glyphs at the body font size, plus cell padding.
+                label_width = pdfmetrics.stringWidth('創造性', body.fontName, body.fontSize) + 12
+                col_widths = [label_width, width - label_width]
+            block = Table(rows, colWidths=col_widths, repeatRows=1,
+                          splitByRow=0 if criteria_table else 1)
             block.setStyle(TableStyle([('GRID', (0, 0), (-1, -1), .3, colors.grey),
                                        ('BACKGROUND', (0, 0), (-1, 0), colors.HexColor('#e6edf4')),
                                        ('VALIGN', (0, 0), (-1, -1), 'TOP')]))
@@ -51,7 +59,8 @@ def main():
             story.append(Paragraph(clean(line.lstrip('> ')), body))
     flush()
     document = SimpleDocTemplate(str(args.output), pagesize=A4, rightMargin=40, leftMargin=40,
-                                 topMargin=35, bottomMargin=35, title='AIWorker-SG2 白板消去テスト', author='Physical AI submission')
+                                 topMargin=35, bottomMargin=35, title='Physical AI 応用1 最終課題', author='chocopan',
+                                 subject='双腕ロボットROBOTIS AI Worker SG2を使ったsim環境でのホワイトボードの掃除')
     document.build(story)
     print(args.output)
 

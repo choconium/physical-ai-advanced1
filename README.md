@@ -1,6 +1,6 @@
-# AIWorker-SG2 白板消去シミュレーション
+# AIWorker-SG2 ホワイトボード消去シミュレーション
 
-ROBOTIS AIWorker-SG2の公式Gazeboモデルで、Q-learningが選んだ順序に従い、MoveItで右腕を動かして白板の「AI」を消すテストサンプルです。
+ROBOTIS AIWorker-SG2の公式Gazeboモデルで、Q-learningが選んだ順序に従い、MoveItで右腕を動かしてホワイトボードの「AI」を消すテストサンプルです。
 
 **[説明レポート PDF](REPORT.pdf) · [レポート本文](REPORT.md) · [実演動画 MP4](media/whiteboard_wipe.mp4)**
 

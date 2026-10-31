@@ -1,10 +1,18 @@
-# Physical AI 応用1 最終課題: SG2白板消去テスト
+# Physical AI 応用1 最終課題
 
-実験日: 2026-10-31。公開先: https://github.com/choconium/physical-ai-advanced1
+テーマ：双腕ロボットROBOTIS AI Worker SG2を使ったsim環境でのホワイトボードの掃除
+
+OmniCampus account：chocopan
+
+email：chocopanium@gmail.com
+
+提出日：2026-10-31
+
+GitHub repo：https://github.com/choconium/physical-ai-advanced1
 
 ## 1. 検討結論
 
-オフィスにあるAIWorker-SG2と同型の公式Gazeboモデルで、白板の文字を消すための「モーション計画・実行・工具座標・被覆」のテストサンプルは実装できた。MoveItで衝突を検査した軌道をGazeboの右腕controllerへ実行し、実測TFに応じて文字セルを消す試験に成功した。
+オフィスにあるAIWorker-SG2と同型の公式Gazeboモデルで、ホワイトボードの文字を消すための「モーション計画・実行・工具座標・被覆」のテストサンプルは実装できた。双腕ロボットSG2の右腕を使用し、MoveItで衝突を検査した軌道をGazeboの右腕controllerへ実行して、実測TFに応じて文字セルを消す試験に成功した。
 
 ただし実物の顔料を消す物理ではなく、幾何学的消去代理モデルである。接触点は板の5mm手前に設定している。接触力、摩擦、消し具のたわみ、把持滑りは評価していない。実機で文字を消せることの実証や、完成したSim-to-Real制御器とは扱わない。
 
@@ -12,7 +20,7 @@
 
 公式AIWorker 2.3.1、SG2、ROS 2 Jazzy、Gazebo Harmonic、MoveItを使う。MoveItの起動はmodel:=sg2を明示する。既定bg2のままSG2を計画する設定にはしない。groupはarm_r、EEはend_effector_r_link、controllerはarm_r_controllerのFollowJointTrajectory。
 
-白板は36×30cm、文字は約20×10cmのAIを27個の黒いセルで表した。板の衝突形状はGazeboとMoveItの両方へ登録し、消し具の取付collisionもMoveItへ登録する。Gazebo上の青い工具は実測TFに追従するvisual proxyであり、力学的に把持・変形する工具ではない。
+ホワイトボードは36×30cm、文字は約20×10cmのAIを27個の黒いセルで表した。板の衝突形状はGazeboとMoveItの両方へ登録し、消し具の取付collisionもMoveItへ登録する。Gazebo上の青い工具は実測TFに追従するvisual proxyであり、力学的に把持・変形する工具ではない。
 
 AIはQ-learningによる固定3帯の順序選択で、同梱の学習器（src/gazebo_aiworker_patrol）を利用する。現在帯・訪問済み集合を状態にし、seed=20261030、4000 episodeで簡略グラフを学習する。文字画像やdirty maskは方策の入力にしていない。ログのdirty_cellsは残存数の記録であり、画像認識や消し残しに応じた適応的再消去を実装したとは主張しない。
 
@@ -67,7 +75,7 @@ MoveItで軌道を作るだけでは押付け力は決まらない。力覚・ad
 | --- | --- |
 | 創造性 | 単なる腕の往復ではなく、AIの帯選択・被覆・消去状態・実機移植用座標を一体化 |
 | 技術力 | 同型SG2、OMPL/Cartesian計画、工具・板のcollision、TF鮮度と姿勢判定、実行結果の照合 |
-| 実用性 | 小領域の白板清掃に向けた、工具TCPとboard frameを差し替える検証基盤 |
+| 実用性 | 小領域のホワイトボード清掃に向けた、工具TCPとboard frameを差し替える検証基盤 |
 | 表現力 | 実際の腕と文字が減る様子だけの動画、説明と限界はレポートへ分離 |
 
 加点を保証するものではない。特に、sim内の代理モデルと実物の清掃性能を区別することを優先した。
