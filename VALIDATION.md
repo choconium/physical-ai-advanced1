@@ -105,3 +105,17 @@ PDFのタイトルは「Physical AI 応用1 最終課題」、Authorはchocopan�
 `tools/container.sh exec python3 -c` で同梱の `Mission` と `train` のimportも成功した。
 独自部分はPythonスクリプトとして直接実行するため、このrepoに独自のpackage.xmlは不要。
 理由と実行境界はREADMEの実行環境にも記載した。
+
+## 説明資料の追加要件レビュー（2026-11-02）
+
+| 要件 | 対応 |
+| --- | --- |
+| 課題の概要・目的 | 第1章「課題の概要・目的と結論」に対象タスクとsimでの検証目的を明記 |
+| 工夫した点 | 第4章「工夫した点と設計変更」、第6章の観点別整理 |
+| PDF形式の簡単な説明資料 | 図2点・実測結果を含むA4・3ページのPDF |
+| ファイル名 | 説明資料_PAI最終課題_chocopan.pdf |
+
+提出用PDFは `tools/render_report.py --input REPORT.md` で指定名へ生成した。
+同一内容を既存リンク用 `REPORT.pdf` へコピーし、byte一致を確認した。
+`pdfinfo`、`pdfimages -list`、`pdftotext -layout`、`pdftoppm` による形式・画像・本文・
+全3頁の表示を確認し、別担当も要件の対応と指定ファイル名を再レビューした。

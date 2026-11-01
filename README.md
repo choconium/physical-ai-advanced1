@@ -2,7 +2,9 @@
 
 ROBOTIS AIWorker-SG2の公式Gazeboモデルで、Q-learningが選んだ順序に従い、MoveItで右腕を動かしてホワイトボードの「AI」を消すテストサンプルです。
 
-**[説明レポート PDF](REPORT.pdf) · [レポート本文](REPORT.md) · [実演動画 MP4](media/whiteboard_wipe.mp4)**
+**[提出用説明資料 PDF](説明資料_PAI最終課題_chocopan.pdf) · [レポート本文](REPORT.md) · [実演動画 MP4](media/whiteboard_wipe.mp4)**
+
+提出用ファイル名は **`説明資料_PAI最終課題_chocopan.pdf`** です。概要・目的・工夫した点を含む3ページの説明資料です。`REPORT.pdf` は既存リンク用の同一内容コピーです。
 
 動画は **95.75秒・等速**、実際に動作したGazebo画面だけです。GitHub上で再生できない場合は、動画ファイルの「View raw」からダウンロードしてください。
 
@@ -20,7 +22,7 @@ AIは固定した3帯の順序を選ぶtabular Q-learningです。状態は現�
 
 ## 収録物
 
-- `REPORT.pdf` / `REPORT.md`: 目的、設計、実測、失敗と改善、加点要素との対応。
+- `説明資料_PAI最終課題_chocopan.pdf` / `REPORT.md`: 概要・目的、工夫、設計、実測、失敗と改善、加点要素との対応。
 - `media/`: 実演MP4と編集区間・速度・ハッシュのmanifest。
 - `tools/`: シーン生成、MoveIt実行、消去判定、録画・編集、監査、PDF生成。
 - `src/gazebo_aiworker_patrol/`: 同梱したROS非依存のQ-learningと状態定義。元の汎用モジュール名を保持しています。
@@ -81,7 +83,7 @@ bash tools/container.sh exec python3 tools/audit_run.py \
 bash tools/container.sh exec python3 tools/audit_run.py \
   --run-dir evidence/wipe06 --output artifacts/published_run_audit.json
 bash tools/container.sh exec python3 tools/render_report.py \
-  --input REPORT.md --output artifacts/REPORT.pdf
+  --input REPORT.md --output artifacts/説明資料_PAI最終課題_chocopan.pdf
 ```
 
 計画だけの確認・座標出力:

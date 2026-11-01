@@ -19,7 +19,7 @@ def clean(text):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--input', type=Path, default=Path('REPORT.md'))
-    parser.add_argument('--output', type=Path, default=Path('REPORT.pdf'))
+    parser.add_argument('--output', type=Path, default=Path('説明資料_PAI最終課題_chocopan.pdf'))
     args = parser.parse_args()
     pdfmetrics.registerFont(TTFont('IPA', '/usr/share/fonts/opentype/ipafont-gothic/ipag.ttf'))
     body = ParagraphStyle('body', fontName='IPA', fontSize=9, leading=15, wordWrap='CJK', spaceAfter=7)
